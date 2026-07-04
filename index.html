@@ -1,75 +1,253 @@
-<style>
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 48px 24px;
-    line-height: 1.55;
-    color: #111827;
-  }
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automaatio- ja ohjelmointiprojektit</title>
 
-  .intro {
-    max-width: 760px;
-    color: #374151;
-  }
-
-  .projects {
-    display: grid;
-    gap: 36px;
-    margin-top: 36px;
-  }
-
-  .project {
-    display: grid;
-    grid-template-columns: minmax(260px, 420px) 1fr;
-    gap: 28px;
-    align-items: center;
-    padding: 24px 0;
-    border-top: 1px solid #d8dee4;
-  }
-
-  .project img {
-    width: 100%;
-    max-height: 420px;
-    object-fit: contain;
-    display: block;
-    background: #f6f8fa;
-    border: 1px solid #d8dee4;
-    border-radius: 8px;
-  }
-
-  .project h2 {
-    margin: 0 0 8px;
-    font-size: 1.35rem;
-  }
-
-  .project p {
-    color: #374151;
-    margin-bottom: 14px;
-  }
-
-  a {
-    color: #0969da;
-  }
-
-  .contact {
-    margin-top: 44px;
-    padding-top: 24px;
-    border-top: 1px solid #d8dee4;
-  }
-
-  @media (max-width: 760px) {
+  <style>
     body {
-      padding: 28px 16px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      line-height: 1.55;
+      color: #111827;
+      background: #ffffff;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 0 40px;
+      color: #374151;
+      font-size: 1.05rem;
+    }
+
+    .projects {
+      display: grid;
+      gap: 36px;
     }
 
     .project {
-      grid-template-columns: 1fr;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: minmax(280px, 430px) 1fr;
+      gap: 32px;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid #d8dee4;
     }
 
-    .project img {
-      max-height: 520px;
+    .project-media {
+      background: #f6f8fa;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-  }
-</style>
+
+    .project-media img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .missing-image {
+      display: none;
+      padding: 32px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .project-media.is-missing .missing-image {
+      display: block;
+    }
+
+    .project-content h2 {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+      line-height: 1.25;
+    }
+
+    .project-content p {
+      margin: 0 0 16px;
+      color: #374151;
+      font-size: 1.03rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: #0969da;
+      font-weight: 600;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 4px;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .contact {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid #d8dee4;
+    }
+
+    .contact h2 {
+      margin: 0 0 12px;
+      font-size: 1.5rem;
+    }
+
+    .contact p {
+      margin: 0;
+      color: #374151;
+    }
+
+    a {
+      color: #0969da;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding: 32px 16px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .project-media img {
+        max-height: 540px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Automaatio- ja ohjelmointiprojektit</h1>
+
+    <p class="intro">
+      Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
+      Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
+      käyttöliittymien rakentaminen.
+    </p>
+  </header>
+
+  <main class="projects">
+    <section class="project">
+      <div class="project-media">
+        <a href="./assets/images/label-software.jpg">
+          <img src="./assets/images/label-software.jpg"
+               alt="Näytönkaappaus tarratulostussovelluksesta"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Automaattinen tarratulostin</h2>
+        <p>
+          Android-sovellus ja tulostusratkaisu kaapeli- ja laitemerkintöjen
+          tekemiseen Brother-tarratulostimella.
+        </p>
+        <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="project-media">
+        <a href="./assets/images/water-meter.jpg">
+          <img src="./assets/images/water-meter.jpg"
+               alt="ESP32:n ja CC1101-moduulin avulla toteutettu vesimittarin etäluenta"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Vesimittarin etäluenta</h2>
+        <p>
+          ESP32:n ja CC1101-radiomoduulin avulla toteutettu vesimittarin
+          langaton etäluenta Home Assistantiin.
+        </p>
+        <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="project-media">
+        <a href="./assets/images/ventilation-control.jpg">
+          <img src="./assets/images/ventilation-control.jpg"
+               alt="Korvausilmalaitteen ohjauksen automaatio"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Korvausilmalaitteen ohjaus</h2>
+        <p>
+          Shellyn, anturin, ESP32:n ja Node-REDin avulla toteutettu automaatio
+          korvausilmalaitteen ohjaukseen.
+        </p>
+        <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="project-media">
+        <a href="./assets/images/moniviiva-game.jpg">
+          <img src="./assets/images/moniviiva-game.jpg"
+               alt="Näytönkaappaus Moniviiva-opettamispelistä"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Moniviiva-opettamispeli</h2>
+        <p>
+          Selainpohjainen opetuspeli moniviivapiirrosten harjoitteluun.
+        </p>
+        <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="project-media is-missing">
+        <div class="missing-image">Projektisivu ja kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Raspberry Pi -infotaulu</h2>
+        <p>
+          Raspberry Pi:llä toteutettava pieni infotaulu, jossa on näyttö ja
+          fyysiset painikkeet.
+        </p>
+        <span class="status">Projektisivu tulossa.</span>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact">
+    <h2>Yhteys</h2>
+    <p>Projektikyselyt ja yhteydenotot: vilperautomation [at] gmail.com</p>
+  </section>
+</body>
+</html>
