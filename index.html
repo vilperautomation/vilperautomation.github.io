@@ -94,6 +94,19 @@
       border: 1px solid #d8dee4;
       border-radius: 8px;
     }
+    intro-hardware {
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.intro-hardware p {
+  margin: 0;
+  color: #374151;
+  font-size: 1.03rem;
+}
 
     .project-media.is-missing .missing-image {
       display: block;
@@ -154,6 +167,7 @@
         grid-template-columns: 1fr;
         gap: 18px;
       }
+      
 
       .project-media img,
       .project-media.wide img {
@@ -174,9 +188,17 @@
       käyttöliittymien rakentaminen.
     </p>
 
-    <img class="intro-image"
-         src="/assets/images/esp.png"
-         alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
+    <div class="intro-hardware">
+  <img class="intro-image"
+       src="/assets/images/esp.png"
+       alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
+
+  <p>
+    Projektit eivät rajoitu pelkkiin ohjelmistoihin, vaan mukana on myös
+    mikrokontrollereita, antureita, langatonta mittausta ja kotiautomaation
+    ohjauksia.
+  </p>
+</div>
   </header>
 
   <main class="projects">
