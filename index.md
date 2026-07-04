@@ -9,6 +9,16 @@ Android-sovellus ja tulostusratkaisu kaapeli- ja laitemerkintöjen tekemiseen Br
 
 [Katso projektisivu](LINKKI_TÄHÄN)
 
+<p align="center">
+  <a href="./assets/images/label-software.jpg">
+    <img src="./assets/images/label-software.jpg"
+         alt="Esimerkki tarrojen ryhmittelystä loppunumeron mukaan"
+         style="width:250px; height:auto;">
+  </a>
+  <br>
+  <em>Näytönkaappaus ohjelmasta.</em>
+</p>
+
 ### Vesimittarin etäluenta
 ESP32:n ja CC1101-radiomoduulin avulla toteutettu vesimittarin langaton etäluenta Home Assistantiin.
 
