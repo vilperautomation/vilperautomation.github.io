@@ -49,7 +49,6 @@
       align-items: center;
       background: transparent;
       border: 0;
-      border-radius: 0;
       overflow: visible;
       min-height: 0;
     }
@@ -65,11 +64,19 @@
       border-radius: 8px;
     }
 
+    .project-media.wide img {
+      max-width: 420px;
+      max-height: 300px;
+    }
+
     .missing-image {
       display: none;
       padding: 32px;
       color: #6b7280;
       text-align: center;
+      background: #f6f8fa;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
     }
 
     .project-media.is-missing .missing-image {
@@ -135,7 +142,9 @@
         gap: 18px;
       }
 
-      .project-media img {
+      .project-media img,
+      .project-media.wide img {
+        max-width: 100%;
         max-height: 540px;
       }
     }
@@ -177,27 +186,29 @@
     </section>
 
     <section class="project">
-      <div class="project-media">
-  <a href="./assets/images/ha-water-dashboard.jpg">
-    <img src="./assets/images/ha-water-dashboard.jpg"
-         alt="Home Assistant -näkymä vesimittarin etäluennasta"
-         onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
-  </a>
-  <div class="missing-image">Kuva tulossa</div>
-</div>
+      <div class="project-media wide">
+        <a href="./assets/images/ha-water-dashboard.jpg">
+          <img src="./assets/images/ha-water-dashboard.jpg"
+               alt="Home Assistant -näkymä vesimittarin etäluennasta"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
       </div>
 
       <div class="project-content">
         <h2>Vesimittarin etäluenta</h2>
         <p>
-          Vesimittarin etäluentaprojekti, jossa vesimittarin kulutustiedot vastaanotetaan langattomasti ESP32-mikrokontrollerin ja CC1101-radiomoduulin avulla. Vastaanotetut tiedot välitetään Home Assistant -kotiautomaatiojärjestelmään.
+          Vesimittarin etäluentaprojekti, jossa vesimittarin kulutustiedot
+          vastaanotetaan langattomasti ESP32-mikrokontrollerin ja
+          CC1101-radiomoduulin avulla. Vastaanotetut tiedot välitetään
+          Home Assistant -kotiautomaatiojärjestelmään.
         </p>
         <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
       </div>
     </section>
 
     <section class="project">
-      <div class="project-media">
+      <div class="project-media wide">
         <a href="./assets/images/ventilation-control.jpg">
           <img src="./assets/images/ventilation-control.jpg"
                alt="Korvausilmalaitteen ohjauksen automaatio"
@@ -217,7 +228,7 @@
     </section>
 
     <section class="project">
-      <div class="project-media">
+      <div class="project-media wide">
         <a href="./assets/images/moniviiva-game.jpg">
           <img src="./assets/images/moniviiva-game.jpg"
                alt="Näytönkaappaus Moniviiva-opettamispelistä"
