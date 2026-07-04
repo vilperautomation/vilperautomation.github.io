@@ -1,116 +1,75 @@
-<!doctype html>
-<html lang="fi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automaatio- ja ohjelmointiprojektit</title>
-  <style>
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    line-height: 1.55;
+    color: #111827;
+  }
+
+  .intro {
+    max-width: 760px;
+    color: #374151;
+  }
+
+  .projects {
+    display: grid;
+    gap: 36px;
+    margin-top: 36px;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: minmax(260px, 420px) 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 24px 0;
+    border-top: 1px solid #d8dee4;
+  }
+
+  .project img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    background: #f6f8fa;
+    border: 1px solid #d8dee4;
+    border-radius: 8px;
+  }
+
+  .project h2 {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+  }
+
+  .project p {
+    color: #374151;
+    margin-bottom: 14px;
+  }
+
+  a {
+    color: #0969da;
+  }
+
+  .contact {
+    margin-top: 44px;
+    padding-top: 24px;
+    border-top: 1px solid #d8dee4;
+  }
+
+  @media (max-width: 760px) {
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.55;
-      color: #1f2933;
-    }
-
-    h1 {
-      margin-bottom: 8px;
-    }
-
-    .intro {
-      max-width: 760px;
-      color: #4b5563;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 32px;
+      padding: 28px 16px;
     }
 
     .project {
-      border: 1px solid #d8dee4;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
 
     .project img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-      background: #f3f4f6;
+      max-height: 520px;
     }
-
-    .project-content {
-      padding: 16px;
-    }
-
-    .project h2 {
-      font-size: 1.15rem;
-      margin: 0 0 8px;
-    }
-
-    .project p {
-      margin: 0 0 14px;
-      color: #4b5563;
-    }
-
-    a {
-      color: #0969da;
-    }
-
-    .contact {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #d8dee4;
-    }
-  </style>
-</head>
-<body>
-  <h1>Automaatio- ja ohjelmointiprojektit</h1>
-
-  <p class="intro">
-    Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
-    Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja käyttöliittymien rakentaminen.
-  </p>
-
-  <main class="projects">
-    <section class="project">
-      <img src="./assets/images/label-software.jpg" alt="Näytönkaappaus tarratulostussovelluksesta">
-      <div class="project-content">
-        <h2>Automaattinen tarratulostin</h2>
-        <p>Android-sovellus ja tulostusratkaisu kaapeli- ja laitemerkintöjen tekemiseen Brother-tarratulostimella.</p>
-        <a href="LINKKI_TÄHÄN">Katso projektisivu</a>
-      </div>
-    </section>
-
-    <section class="project">
-      <img src="./assets/images/water-meter.jpg" alt="ESP32:n ja CC1101-moduulin avulla toteutettu vesimittarin etäluenta">
-      <div class="project-content">
-        <h2>Vesimittarin etäluenta</h2>
-        <p>ESP32:n ja CC1101-radiomoduulin avulla toteutettu vesimittarin langaton etäluenta Home Assistantiin.</p>
-        <a href="LINKKI_TÄHÄN">Katso projektisivu</a>
-      </div>
-    </section>
-
-    <section class="project">
-      <img src="./assets/images/ventilation-control.jpg" alt="Korvausilmalaitteen ohjauksen automaatio">
-      <div class="project-content">
-        <h2>Korvausilmalaitteen ohjaus</h2>
-        <p>Shellyn, anturin, ESP32:n ja Node-REDin avulla toteutettu automaatio korvausilmalaitteen ohjaukseen.</p>
-        <a href="LINKKI_TÄHÄN">Katso projektisivu</a>
-      </div>
-    </section>
-  </main>
-
-  <section class="contact">
-    <h2>Yhteys</h2>
-    <p>Projektikyselyt ja yhteydenotot: vilperautomation [at] gmail.com</p>
-  </section>
-</body>
-</html>
+  }
+</style>
