@@ -36,21 +36,21 @@
 
     .project {
       display: grid;
-      grid-template-columns: minmax(280px, 430px) 1fr;
+      grid-template-columns: minmax(360px, 560px) 1fr;
       gap: 32px;
       align-items: center;
       padding-top: 32px;
       border-top: 1px solid #d8dee4;
     }
 
-    .project-media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: transparent;
-      border: 0;
-      overflow: visible;
-      min-height: 0;
+    .project-media.wide {
+      justify-content: flex-start;
+    }
+
+    .project-media.wide img {
+      width: 100%;
+      max-width: 560px;
+      max-height: none;
     }
 
     .project-media img {
