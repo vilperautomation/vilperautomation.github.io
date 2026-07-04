@@ -128,7 +128,33 @@
       color: #0969da;
     }
 
+    .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-image {
+  width: 260px;
+  max-height: 180px;
+  object-fit: cover;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  background: #f6f8fa;
+}
+
     @media (max-width: 760px) {
+      hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-height: 260px;
+  }
       body {
         padding: 32px 16px;
       }
@@ -152,7 +178,8 @@
 </head>
 
 <body>
-  <header>
+<header class="hero">
+  <div>
     <h1>Automaatio- ja ohjelmointiprojektit</h1>
 
     <p class="intro">
@@ -160,7 +187,12 @@
       Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
       käyttöliittymien rakentaminen.
     </p>
-  </header>
+  </div>
+
+  <img class="hero-image"
+       src="./assets/images/esp32.jpg"
+       alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
+</header>
 
   <main class="projects">
     <section class="project">
