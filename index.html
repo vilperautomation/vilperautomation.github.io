@@ -22,41 +22,26 @@
       line-height: 1.2;
     }
 
+    .page-header {
+      margin-bottom: 40px;
+    }
+
     .intro {
       max-width: 760px;
-      margin: 0;
+      margin: 0 0 28px;
       color: #374151;
       font-size: 1.05rem;
     }
 
-.hardware-note img {
-  width: 420px;
-  max-width: 100%;
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
-  display: block;
-  border: 1px solid #d8dee4;
-  border-radius: 8px;
-  background: #f6f8fa;
-}
-
-    .hardware-note img {
+    .intro-image {
       width: 420px;
       max-width: 100%;
-      height: 220px;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
       display: block;
+      margin: 0;
       border: 1px solid #d8dee4;
       border-radius: 8px;
       background: #f6f8fa;
-    }
-
-    .hardware-note p {
-      margin: 0;
-      color: #374151;
-      font-size: 1.03rem;
     }
 
     .projects {
@@ -161,14 +146,8 @@
         font-size: 1.8rem;
       }
 
-      .hardware-note {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .hardware-note img {
+      .intro-image {
         width: 100%;
-        height: 220px;
       }
 
       .project {
@@ -186,26 +165,18 @@
 </head>
 
 <body>
-  <header>
+  <header class="page-header">
     <h1>Automaatio- ja ohjelmointiprojektit</h1>
+
     <p class="intro">
       Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
-      Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
-      käyttöliittymien rakentaminen. Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
       Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
       käyttöliittymien rakentaminen.
     </p>
 
-    <div class="hardware-note">
-      <img src="/assets/images/esp.png"
-           alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
-
-      <p>
-        Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
-      Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
-      käyttöliittymien rakentaminen.
-      </p>
-    </div>
+    <img class="intro-image"
+         src="/assets/images/esp.png"
+         alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
   </header>
 
   <main class="projects">
