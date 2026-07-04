@@ -24,9 +24,36 @@
 
     .intro {
       max-width: 760px;
-      margin: 0 0 40px;
+      margin: 0;
       color: #374151;
       font-size: 1.05rem;
+    }
+
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .hero-text {
+      margin-bottom: 28px;
+    }
+
+    .hero-media {
+      width: 430px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image {
+      width: 420px;
+      max-width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+      background: #f6f8fa;
     }
 
     .projects {
@@ -34,40 +61,41 @@
       gap: 36px;
     }
 
-.project {
-  display: grid;
-  grid-template-columns: 430px minmax(0, 1fr);
-  gap: 32px;
-  align-items: center;
-  padding-top: 32px;
-  border-top: 1px solid #d8dee4;
-}
-.project-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: 0;
-  overflow: visible;
-  min-height: 0;
-}
+    .project {
+      display: grid;
+      grid-template-columns: 430px minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid #d8dee4;
+    }
 
-.project-media img {
-  width: auto;
-  max-width: 260px;
-  max-height: 520px;
-  object-fit: contain;
-  display: block;
-  background: #f6f8fa;
-  border: 1px solid #d8dee4;
-  border-radius: 8px;
-}
+    .project-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: 0;
+      overflow: visible;
+      min-height: 0;
+    }
 
-.project-media.wide img {
-  width: 420px;
-  max-width: 100%;
-  max-height: none;
-}
+    .project-media img {
+      width: auto;
+      max-width: 260px;
+      max-height: 520px;
+      object-fit: contain;
+      display: block;
+      background: #f6f8fa;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+    }
+
+    .project-media.wide img {
+      width: 420px;
+      max-width: 100%;
+      max-height: none;
+    }
 
     .missing-image {
       display: none;
@@ -101,13 +129,6 @@
       font-weight: 600;
     }
 
-    .status {
-      display: inline-block;
-      margin-top: 4px;
-      color: #6b7280;
-      font-style: italic;
-    }
-
     .contact {
       margin-top: 48px;
       padding-top: 28px;
@@ -128,39 +149,22 @@
       color: #0969da;
     }
 
-.hero {
-  margin-bottom: 40px;
-}
-
-.hero-image {
-  width: 420px;
-  max-width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  margin: 28px 0 0;
-  border: 1px solid #d8dee4;
-  border-radius: 8px;
-  background: #f6f8fa;
-}
-
     @media (max-width: 760px) {
-      .hero-image {
-    width: 100%;
-    height: 220px;
-  }
-      .hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
       body {
         padding: 32px 16px;
       }
 
       h1 {
         font-size: 1.8rem;
+      }
+
+      .hero-media {
+        width: 100%;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 220px;
       }
 
       .project {
@@ -178,19 +182,23 @@
 </head>
 
 <body>
-<header>
-  <h1>Automaatio- ja ohjelmointiprojektit</h1>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Automaatio- ja ohjelmointiprojektit</h1>
 
-  <p class="intro">
-    Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
-    Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
-    käyttöliittymien rakentaminen.
-  </p>
+      <p class="intro">
+        Tälle sivulle on koottu omia ohjelmointi-, automaatio- ja elektroniikkaprojekteja.
+        Projekteissa yhdistyvät sulautetut laitteet, kotiautomaatio, mittausdata ja
+        käyttöliittymien rakentaminen.
+      </p>
+    </div>
 
-  <img class="hero-image"
-       src="/assets/images/esp.png"
-       alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
-</header>
+    <div class="hero-media">
+      <img class="hero-image"
+           src="/assets/images/esp.png"
+           alt="ESP32-mikrokontrolleri ja elektroniikkakytkentä">
+    </div>
+  </header>
 
   <main class="projects">
     <section class="project">
@@ -275,8 +283,6 @@
         <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
       </div>
     </section>
-
-
   </main>
 
   <section class="contact">
