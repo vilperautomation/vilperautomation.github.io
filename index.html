@@ -89,38 +89,40 @@
   object-position: center;
 }
 
- .project-media.label-pair {
+.project-media.label-pair {
   width: 420px;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 12px;
+  justify-content: center;
   align-items: start;
 }
 
 .project-media.label-pair a {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
+  display: block;
 }
 
 .project-media.label-pair img {
   display: block;
+  height: 310px;
   width: auto;
-  max-width: 100%;
-  height: auto;
+  max-width: 200px;
+  object-fit: contain;
   background: #ffffff;
   border: 1px solid #d8dee4;
   border-radius: 8px;
 }
 
 .project-media.label-pair .label-ui-image {
-  max-height: 310px;
+  height: 310px;
+  width: auto;
 }
 
 .project-media.label-pair .label-printer-image {
-  max-height: 310px;
+  height: 310px;
+  width: auto;
+  max-width: 190px;
 }
 
     .missing-image {
