@@ -83,47 +83,52 @@
     }
 
     .project-media.wide.sensor-image img {
-  width: 420px;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-}
+      width: 420px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+    }
 
-.project-media.label-pair {
-  width: 420px;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 12px;
-  justify-content: center;
-  align-items: start;
-}
+    .project-media.label-pair {
+      width: 420px;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: start;
+      justify-content: center;
+    }
 
-.project-media.label-pair a {
-  display: block;
-}
+    .project-media.label-pair a {
+      width: 100%;
+      height: 310px;
+      display: block;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+    }
 
-.project-media.label-pair img {
-  display: block;
-  height: 310px;
-  width: auto;
-  max-width: 200px;
-  object-fit: contain;
-  background: #ffffff;
-  border: 1px solid #d8dee4;
-  border-radius: 8px;
-}
+    .project-media.label-pair img {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      display: block;
+      border: 0;
+      border-radius: 0;
+      background: #ffffff;
+    }
 
-.project-media.label-pair .label-ui-image {
-  height: 310px;
-  width: auto;
-}
+    .project-media.label-pair .label-ui-image {
+      object-fit: contain;
+      object-position: center;
+    }
 
-.project-media.label-pair .label-printer-image {
-  height: 310px;
-  width: auto;
-  max-width: 190px;
-}
+    .project-media.label-pair .label-printer-image {
+      object-fit: cover;
+      object-position: center bottom;
+    }
 
     .missing-image {
       display: none;
@@ -202,11 +207,22 @@
         max-width: 100%;
         max-height: 540px;
       }
+
       .project-media.wide.sensor-image img {
-    width: 100%;
-    height: 220px;
-    max-height: none;
-  }
+        width: 100%;
+        height: 220px;
+        max-height: none;
+      }
+
+      .project-media.label-pair {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .project-media.label-pair a {
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -216,11 +232,11 @@
     <h1>Automaatio- ja ohjelmointiprojektit</h1>
 
     <p class="intro">
-  Tälle sivulle on koottu omia ohjelmointiprojekteja, jotka liittyvät
-  automaatioon, sähkötekniikkaan ja elektroniikkaan. Projektien teemoja ovat muun muassa
-  mikrokontrollerit, kotiautomaatio ja mittausdatan hyödyntäminen. 
-  Osa projekteista on syntynyt käytännön tarpeista, osa taas oppimis- ja kokeiluprojekteina.
-</p>
+      Tälle sivulle on koottu omia ohjelmointiprojekteja, jotka liittyvät
+      automaatioon, sähkötekniikkaan ja elektroniikkaan. Projektien teemoja ovat muun muassa
+      mikrokontrollerit, kotiautomaatio ja mittausdatan hyödyntäminen.
+      Osa projekteista on syntynyt käytännön tarpeista, osa taas oppimis- ja kokeiluprojekteina.
+    </p>
   </header>
 
   <main class="projects">
@@ -248,13 +264,13 @@
 
     <section class="project">
       <div class="project-media wide sensor-image">
-  <a href="./assets/images/sensori.png">
-    <img src="./assets/images/sensori.png"
-         alt="BME280-anturi"
-         onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
-  </a>
-  <div class="missing-image">Kuva tulossa</div>
-</div>
+        <a href="./assets/images/sensori.png">
+          <img src="./assets/images/sensori.png"
+               alt="BME280-anturi"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
 
       <div class="project-content">
         <h2>Korvausilmalaitteen ohjaus</h2>
@@ -267,7 +283,7 @@
     </section>
 
     <section class="project">
-     <div class="project-media wide">
+      <div class="project-media wide">
         <a href="./assets/images/moniviiva.jpg">
           <img src="./assets/images/moniviiva.jpg"
                alt="Näytönkaappaus Moniviiva-opettamispelistä"
@@ -279,32 +295,33 @@
       <div class="project-content">
         <h2>Moniviiva-opettamispeli</h2>
         <p>
-         Selainpohjainen opetuspeli valaistuskytkentöjen harjoitteluun. 
-         Pelissä rakennetaan kytkentöjä ja nähdään visuaalisesti, miten eri kytkinasennot vaikuttavat lamppujen toimintaan.
+          Selainpohjainen opetuspeli valaistuskytkentöjen harjoitteluun.
+          Pelissä rakennetaan kytkentöjä ja nähdään visuaalisesti, miten eri
+          kytkinasennot vaikuttavat lamppujen toimintaan.
         </p>
         <a class="project-link" href="LINKKI_TÄHÄN">Katso projektisivu</a>
       </div>
     </section>
 
     <section class="project">
-
       <div class="project-media label-pair">
-  <a href="./assets/images/label-software-2.png">
-    <img src="./assets/images/label-software-2.png"
-         class="label-ui-image"
-         alt="Näytönkaappaus tarratulostussovelluksesta"
-         onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
-  </a>
+        <a href="./assets/images/label-software-2.png">
+          <img src="./assets/images/label-software-2.png"
+               class="label-ui-image"
+               alt="Näytönkaappaus tarratulostussovelluksesta"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
 
-  <a href="./assets/images/label-printer.jpg">
-    <img src="./assets/images/label-printer.jpg"
-         class="label-printer-image"
-         alt="Tulostettuja kaapelitarroja"
-         onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
-  </a>
+        <a href="./assets/images/label-printer.jpg">
+          <img src="./assets/images/label-printer.jpg"
+               class="label-printer-image"
+               alt="Tulostettuja kaapelitarroja"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
 
-  <div class="missing-image">Kuva tulossa</div>
-</div>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
       <div class="project-content">
         <h2>Automaattinen tarratulostin</h2>
         <p>
