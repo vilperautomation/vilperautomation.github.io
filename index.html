@@ -93,6 +93,13 @@
       object-position: center;
     }
 
+    .project-media.wide.rbpi-image img {
+      width: 420px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .project-media.label-pair {
       width: 420px;
       max-width: 100%;
@@ -134,31 +141,6 @@
       object-position: center bottom;
       transform: scale(1.05);
       transform-origin: center bottom;
-    }
-
-    .project-media.rbpi-image {
-      width: 420px;
-      max-width: 100%;
-    }
-
-    .project-media.rbpi-image a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 100%;
-      background: transparent;
-      border: 0;
-    }
-
-    .project-media.rbpi-image img {
-      width: auto;
-      max-width: 100%;
-      max-height: 360px;
-      object-fit: contain;
-      display: block;
-      background: #f6f8fa;
-      border: 1px solid #d8dee4;
-      border-radius: 8px;
     }
 
     .missing-image {
@@ -308,6 +290,14 @@
         object-position: center;
       }
 
+      .project-media.wide.rbpi-image img {
+        width: 100%;
+        height: 220px;
+        max-height: none;
+        object-fit: cover;
+        object-position: center;
+      }
+
       .project-media.label-pair {
         width: 100%;
         grid-template-columns: 1fr 1fr;
@@ -323,25 +313,6 @@
         height: 100%;
         max-width: none;
         max-height: none;
-      }
-
-      .project-media.rbpi-image {
-        width: 100%;
-      }
-
-      .project-media.rbpi-image a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      }
-
-      .project-media.rbpi-image img {
-        width: auto;
-        max-width: 100%;
-        max-height: 390px;
-        object-fit: contain;
-        display: block;
       }
 
       .contact {
@@ -470,10 +441,10 @@
     </section>
 
     <section class="project">
-      <div class="project-media rbpi-image">
-        <a href="./assets/images/pi-display.png">
-          <img src="./assets/images/pi-display.png"
-               alt="Raspberry Pi -infotaulu, näyttö ja fyysiset painikkeet"
+      <div class="project-media wide rbpi-image">
+        <a href="./assets/images/rb-pi.jpg">
+          <img src="./assets/images/rb-pi.jpg"
+               alt="Projektissa käytetty Raspberry Pi"
                onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
         </a>
         <div class="missing-image">Kuva tulossa</div>
@@ -487,7 +458,7 @@
           painikkeilla, ja ohjelma käynnistyy automaattisesti laitteen saadessa
           virran.
         </p>
-        <a class="project-link" href="https://vilperautomation.github.io/rpi-info-display/">Katso projektisivu</a>
+        <a class="project-link" href="https://vilperautomation.github.io/raspberry-pi-infotaulu/">Katso projektisivu</a>
       </div>
     </section>
   </main>
