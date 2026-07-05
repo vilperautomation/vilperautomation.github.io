@@ -99,20 +99,28 @@
 }
 
 .project-media.label-pair a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
 }
 
 .project-media.label-pair img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: none;
-  object-fit: initial;
   display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   background: #ffffff;
   border: 1px solid #d8dee4;
   border-radius: 8px;
+}
+
+.project-media.label-pair .label-ui-image {
+  max-height: 310px;
+}
+
+.project-media.label-pair .label-printer-image {
+  max-height: 310px;
 }
 
     .missing-image {
@@ -281,12 +289,14 @@
       <div class="project-media label-pair">
   <a href="./assets/images/label-software-2.png">
     <img src="./assets/images/label-software-2.png"
+         class="label-ui-image"
          alt="Näytönkaappaus tarratulostussovelluksesta"
          onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
   </a>
 
   <a href="./assets/images/label-printer.jpg">
     <img src="./assets/images/label-printer.jpg"
+         class="label-printer-image"
          alt="Tulostettuja kaapelitarroja"
          onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
   </a>
