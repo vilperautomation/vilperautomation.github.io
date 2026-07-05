@@ -211,11 +211,25 @@
   .project {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding-top: 18px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 
   .project:first-child {
     padding-top: 0;
+  }
+
+  .project:last-child {
+    padding-bottom: 0;
+  }
+
+  .project-content p {
+    margin-bottom: 8px;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 0;
   }
 
   .project-media img,
@@ -238,10 +252,6 @@
 
   .project-media.label-pair a {
     height: 280px;
-  }
-
-  .project-content p {
-    margin-bottom: 12px;
   }
 
   .contact {
