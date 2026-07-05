@@ -200,8 +200,8 @@
   }
 
   .page-header {
-    margin-bottom: 24px;
-    padding-bottom: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
   }
 
   .projects {
@@ -210,9 +210,9 @@
 
   .project {
     grid-template-columns: 1fr;
-    gap: 14px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    row-gap: 12px;
+    padding-top: 22px;
+    padding-bottom: 34px;
   }
 
   .project:first-child {
@@ -223,13 +223,42 @@
     padding-bottom: 0;
   }
 
+  /*
+    Mobiilissa järjestys:
+    otsikko → kuva → teksti → linkki
+  */
+  .project-content {
+    display: contents;
+  }
+
+  .project-content h2 {
+    order: 1;
+    margin: 0;
+  }
+
+  .project-media {
+    order: 2;
+  }
+
   .project-content p {
-    margin-bottom: 8px;
+    order: 3;
+    margin: 0;
+  }
+
+  .project-content .project-link,
+  .project-content .project-links {
+    order: 4;
   }
 
   .project-link {
     display: inline-block;
     margin-top: 0;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .project-media img,
@@ -254,9 +283,16 @@
     height: 280px;
   }
 
+  .project-media.label-pair img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+  }
+
   .contact {
-    margin-top: 28px;
-    padding-top: 20px;
+    margin-top: 32px;
+    padding-top: 22px;
   }
 }
   </style>
