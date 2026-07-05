@@ -6,6 +6,10 @@
   <title>Automaation ja sähkötekniikan ohjelmointiprojektit</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       max-width: 1100px;
@@ -63,12 +67,6 @@
       border: 0;
       overflow: visible;
       min-height: 0;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
     }
 
     .project-media img {
@@ -145,8 +143,10 @@
 
     .project-media.wide.rbpi-image a {
       width: 100%;
-      height: 240px;
-      display: block;
+      height: 330px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
       background: #f6f8fa;
       border: 1px solid #d8dee4;
@@ -154,13 +154,13 @@
     }
 
     .project-media.wide.rbpi-image img {
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      max-height: none;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
       display: block;
-      object-fit: cover;
-      object-position: center bottom;
+      background: transparent;
       border: 0;
       border-radius: 0;
     }
@@ -195,6 +195,12 @@
       display: inline-block;
       color: #0969da;
       font-weight: 600;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .contact {
@@ -329,8 +335,10 @@
 
       .project-media.wide.rbpi-image a {
         width: 100%;
-        height: 220px;
-        display: block;
+        height: 310px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         background: #f6f8fa;
         border: 1px solid #d8dee4;
@@ -338,13 +346,13 @@
       }
 
       .project-media.wide.rbpi-image img {
-        width: 100%;
-        height: 100%;
-        max-width: none;
-        max-height: none;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
         display: block;
-        object-fit: cover;
-        object-position: center bottom;
+        background: transparent;
         border: 0;
         border-radius: 0;
       }
@@ -426,7 +434,7 @@
         <a href="./assets/images/label-printer.jpg">
           <img src="./assets/images/label-printer.jpg"
                class="label-printer-image"
-               alt="Tulostettuja kaapelitarroja"
+               alt="Brother-tarratulostin ja tulostettuja kaapelitarroja"
                onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
         </a>
 
@@ -462,6 +470,7 @@
           Pelissä rakennetaan kytkentöjä ja nähdään visuaalisesti, miten eri
           kytkinasennot vaikuttavat lamppujen toimintaan.
         </p>
+
         <div class="project-links">
           <a class="project-link" href="https://vilper.itch.io/moniviiva">
             Pelin tietokoneversio
@@ -477,7 +486,7 @@
       <div class="project-media wide rbpi-image">
         <a href="./assets/images/pi-display.png">
           <img src="./assets/images/pi-display.png"
-               alt="Raspberry Pi -infotaulu"
+               alt="Raspberry Pi -infotaulu, näyttö ja fyysiset painikkeet"
                onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
         </a>
         <div class="missing-image">Kuva tulossa</div>
