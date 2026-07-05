@@ -136,33 +136,29 @@
       transform-origin: center bottom;
     }
 
-    .project-media.wide.rbpi-image {
+    .project-media.rbpi-image {
       width: 420px;
       max-width: 100%;
     }
 
-    .project-media.wide.rbpi-image a {
-      width: 100%;
-      height: 330px;
+    .project-media.rbpi-image a {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      max-width: 100%;
+      background: transparent;
+      border: 0;
+    }
+
+    .project-media.rbpi-image img {
+      width: auto;
+      max-width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      display: block;
       background: #f6f8fa;
       border: 1px solid #d8dee4;
       border-radius: 8px;
-    }
-
-    .project-media.wide.rbpi-image img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
     }
 
     .missing-image {
@@ -329,32 +325,23 @@
         max-height: none;
       }
 
-      .project-media.wide.rbpi-image {
+      .project-media.rbpi-image {
         width: 100%;
       }
 
-      .project-media.wide.rbpi-image a {
-        width: 100%;
-        height: 310px;
+      .project-media.rbpi-image a {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        background: #f6f8fa;
-        border: 1px solid #d8dee4;
-        border-radius: 8px;
+        width: 100%;
       }
 
-      .project-media.wide.rbpi-image img {
+      .project-media.rbpi-image img {
         width: auto;
-        height: auto;
         max-width: 100%;
-        max-height: 100%;
+        max-height: 390px;
         object-fit: contain;
         display: block;
-        background: transparent;
-        border: 0;
-        border-radius: 0;
       }
 
       .contact {
@@ -483,7 +470,7 @@
     </section>
 
     <section class="project">
-      <div class="project-media wide rbpi-image">
+      <div class="project-media rbpi-image">
         <a href="./assets/images/pi-display.png">
           <img src="./assets/images/pi-display.png"
                alt="Raspberry Pi -infotaulu, näyttö ja fyysiset painikkeet"
