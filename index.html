@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automaatio- ja ohjelmointiprojektitT</title>
+  <title>Automaatio- ja ohjelmointiprojektit</title>
 
   <style>
     body {
@@ -121,13 +121,15 @@
     }
 
     .project-media.label-pair .label-ui-image {
-      object-fit: contain;
-      object-position: center;
+      object-fit: cover;
+      object-position: top center;
     }
 
     .project-media.label-pair .label-printer-image {
       object-fit: cover;
       object-position: center bottom;
+      transform: scale(1.05);
+      transform-origin: center bottom;
     }
 
     .missing-image {
