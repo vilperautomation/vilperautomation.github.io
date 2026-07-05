@@ -64,11 +64,12 @@
       overflow: visible;
       min-height: 0;
     }
+
     .project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
     .project-media img {
       width: auto;
@@ -137,6 +138,33 @@
       transform-origin: center bottom;
     }
 
+    .project-media.wide.rbpi-image {
+      width: 420px;
+      max-width: 100%;
+    }
+
+    .project-media.wide.rbpi-image a {
+      width: 100%;
+      height: 240px;
+      display: block;
+      overflow: hidden;
+      background: #f6f8fa;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+    }
+
+    .project-media.wide.rbpi-image img {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      display: block;
+      object-fit: cover;
+      object-position: center bottom;
+      border: 0;
+      border-radius: 0;
+    }
+
     .missing-image {
       display: none;
       padding: 32px;
@@ -168,12 +196,6 @@
       color: #0969da;
       font-weight: 600;
     }
-    .project-media.wide.rbpi-image img {
-  width: 420px;
-  height: 360px;
-  object-fit: cover;
-  object-position: center;
-}
 
     .contact {
       margin-top: 48px;
@@ -190,134 +212,148 @@
       margin: 0;
       color: #374151;
     }
-  
 
     a {
       color: #0969da;
     }
 
-   @media (max-width: 760px) {
-  body {
-    padding: 28px 16px;
-  }
+    @media (max-width: 760px) {
+      body {
+        padding: 28px 16px;
+      }
 
-  h1 {
-    font-size: 1.8rem;
-    text-align: left;
-  }
+      h1 {
+        font-size: 1.8rem;
+        text-align: left;
+      }
 
-  .page-header {
-    margin-bottom: 26px;
-    padding-bottom: 22px;
-  }
+      .page-header {
+        margin-bottom: 26px;
+        padding-bottom: 22px;
+      }
 
-  .projects {
-    gap: 0;
-  }
+      .projects {
+        gap: 0;
+      }
 
-  .project {
-    grid-template-columns: 1fr;
-    row-gap: 12px;
-    padding-top: 16px;
-    padding-bottom: 24px;
-  }
+      .project {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 24px;
+      }
 
-  .project:first-child {
-    padding-top: 0;
-  }
+      .project:first-child {
+        padding-top: 0;
+      }
 
-  .project:last-child {
-    padding-bottom: 0;
-  }
+      .project:last-child {
+        padding-bottom: 0;
+      }
 
-  /*
-    Mobiilissa järjestys:
-    otsikko → kuva → teksti → linkki
-  */
-  .project-content {
-    display: contents;
-  }
+      .project-content {
+        display: contents;
+      }
 
-  .project-content h2 {
-    order: 1;
-    margin: 0;
-  }
+      .project-content h2 {
+        order: 1;
+        margin: 0;
+      }
 
-  .project-media {
-    order: 2;
-    width: 100%;
-  }
+      .project-media {
+        order: 2;
+        width: 100%;
+      }
 
-  .project-content p {
-    order: 3;
-    margin: 0;
-  }
+      .project-content p {
+        order: 3;
+        margin: 0;
+      }
 
-  .project-content .project-link,
-  .project-content .project-links {
-    order: 4;
-    margin-top: -4px;
-  }
+      .project-content .project-link,
+      .project-content .project-links {
+        order: 4;
+        margin-top: -4px;
+      }
 
-  .project-link {
-    display: inline-block;
-  }
+      .project-link {
+        display: inline-block;
+      }
 
-  .project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-  .project-media.wide a {
-    display: block;
-    width: 100%;
-  }
+      .project-media.wide a {
+        display: block;
+        width: 100%;
+      }
 
-  .project-media img,
-  .project-media.wide img {
-    width: 100%;
-    max-width: 100%;
-    max-height: 540px;
-  }
+      .project-media img,
+      .project-media.wide img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 540px;
+      }
 
-  .project-media.wide.sensor-image img {
-    width: 100%;
-    height: 220px;
-    max-height: none;
-    object-fit: cover;
-    object-position: center;
-  }
+      .project-media.wide.sensor-image img {
+        width: 100%;
+        height: 220px;
+        max-height: none;
+        object-fit: cover;
+        object-position: center;
+      }
 
-  .project-media.label-pair {
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+      .project-media.label-pair {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
 
-  .project-media.label-pair a {
-    height: 280px;
-  }
+      .project-media.label-pair a {
+        height: 280px;
+      }
 
-  .project-media.label-pair img {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-  }
-     .project-media.wide.rbpi-image img {
-  width: 100%;
-  height: 300px;
-  max-height: none;
-  object-fit: cover;
-  object-position: center;
-}
+      .project-media.label-pair img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+      }
 
-  .contact {
-    margin-top: 28px;
-    padding-top: 22px;
-  }
-}
+      .project-media.wide.rbpi-image {
+        width: 100%;
+      }
+
+      .project-media.wide.rbpi-image a {
+        width: 100%;
+        height: 220px;
+        display: block;
+        overflow: hidden;
+        background: #f6f8fa;
+        border: 1px solid #d8dee4;
+        border-radius: 8px;
+      }
+
+      .project-media.wide.rbpi-image img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        display: block;
+        object-fit: cover;
+        object-position: center bottom;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .contact {
+        margin-top: 28px;
+        padding-top: 22px;
+      }
+    }
   </style>
 </head>
 
@@ -367,17 +403,17 @@
       </div>
 
       <div class="project-content">
-  <h2>Korvausilmalaitteen ohjaus</h2>
-  <p>
-    Korvausilmalaitteen ohjausautomaatiossa anturin mittaustieto luetaan
-    ESP32:lla ja tuodaan Node-REDiin, jossa toteutetaan laitteen ohjauslogiikka.
-    Varsinainen päälle- ja poiskytkentä tehdään Shelly Plug -älypistorasian
-    kautta.
-  </p>
-  <a class="project-link" href="https://vilperautomation.github.io/humidity-sensor/">Katso projektisivu</a>
-</div>
+        <h2>Korvausilmalaitteen ohjaus</h2>
+        <p>
+          Korvausilmalaitteen ohjausautomaatiossa anturin mittaustieto luetaan
+          ESP32:lla ja tuodaan Node-REDiin, jossa toteutetaan laitteen ohjauslogiikka.
+          Varsinainen päälle- ja poiskytkentä tehdään Shelly Plug -älypistorasian
+          kautta.
+        </p>
+        <a class="project-link" href="https://vilperautomation.github.io/humidity-sensor/">Katso projektisivu</a>
       </div>
-      </section>
+    </section>
+
     <section class="project">
       <div class="project-media label-pair">
         <a href="./assets/images/label-ui.png">
@@ -396,6 +432,7 @@
 
         <div class="missing-image">Kuva tulossa</div>
       </div>
+
       <div class="project-content">
         <h2>Automaattinen tarratulostin</h2>
         <p>
@@ -426,45 +463,46 @@
           kytkinasennot vaikuttavat lamppujen toimintaan.
         </p>
         <div class="project-links">
-  <a class="project-link" href="https://vilper.itch.io/moniviiva">
-    Pelin tietokoneversio
-  </a>
-  <a class="project-link" href="https://vilper.itch.io/moniviivapiirrokset-mobiiliversio">
-    Pelin mobiiliversio
-  </a>
-</div>
+          <a class="project-link" href="https://vilper.itch.io/moniviiva">
+            Pelin tietokoneversio
+          </a>
+          <a class="project-link" href="https://vilper.itch.io/moniviivapiirrokset-mobiiliversio">
+            Pelin mobiiliversio
+          </a>
+        </div>
       </div>
     </section>
-    <section class="project">
-  <div class="project-media wide rbpi-image">
-    <a href="./assets/images/pi-display.png">
-      <img src="./assets/images/pi-display.png"
-           alt="Raspberry Pi -infotaulu"
-           onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
-    </a>
-    <div class="missing-image">Kuva tulossa</div>
-  </div>
 
-  <div class="project-content">
-    <h2>Raspberry Pi -infotaulu</h2>
-    <p>
-      Raspberry Pi:llä toteutettu infotaulu, joka näyttää arjen kannalta
-      tärkeitä tietoja suurella tekstillä. Näkymää vaihdetaan fyysisillä
-      painikkeilla, ja ohjelma käynnistyy automaattisesti laitteen saadessa
-      virran.
-    </p>
-    <a class="project-link" href="https://vilperautomation.github.io/raspberry-pi-infotaulu/">Katso projektisivu</a>
-  </div>
-</section>
+    <section class="project">
+      <div class="project-media wide rbpi-image">
+        <a href="./assets/images/pi-display.png">
+          <img src="./assets/images/pi-display.png"
+               alt="Raspberry Pi -infotaulu"
+               onerror="this.closest('.project-media').classList.add('is-missing'); this.remove();">
+        </a>
+        <div class="missing-image">Kuva tulossa</div>
+      </div>
+
+      <div class="project-content">
+        <h2>Raspberry Pi -infotaulu</h2>
+        <p>
+          Raspberry Pi:llä toteutettu infotaulu, joka näyttää arjen kannalta
+          tärkeitä tietoja suurella tekstillä. Näkymää vaihdetaan fyysisillä
+          painikkeilla, ja ohjelma käynnistyy automaattisesti laitteen saadessa
+          virran.
+        </p>
+        <a class="project-link" href="https://vilperautomation.github.io/raspberry-pi-infotaulu/">Katso projektisivu</a>
+      </div>
+    </section>
   </main>
 
- <section class="contact">
-  <h2>Yhteydenotot</h2>
-  <p>
-    Jos jokin projekti herätti kiinnostusta tai haluat kysyä lisää,
-    sähköpostia voi lähettää osoitteeseen
-    <a href="mailto:vilperautomation@gmail.com">vilperautomation@gmail.com</a>.
-  </p>
-</section>
+  <section class="contact">
+    <h2>Yhteydenotot</h2>
+    <p>
+      Jos jokin projekti herätti kiinnostusta tai haluat kysyä lisää,
+      sähköpostia voi lähettää osoitteeseen
+      <a href="mailto:vilperautomation@gmail.com">vilperautomation@gmail.com</a>.
+    </p>
+  </section>
 </body>
 </html>
